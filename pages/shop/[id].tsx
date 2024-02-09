@@ -13,7 +13,7 @@ const Shop = () => {
       const data = await res.json();
       return data;
     };
-  
+
     fetchCar()
       .catch(console.error)
       .then((cars) => {
@@ -28,12 +28,11 @@ const Shop = () => {
         <title>Volvo | SHOP {car?.modelName}</title>
       </Head>
       <hgroup role="heading" aria-level={1}>
-        <Text variant="hillary" subStyle="emphasis">
+        <Text variant="hillary" subStyle="emphasis" data-cy="title">
           BUY ALL GOOD {car?.modelName}
         </Text>
-        <Text variant="hillary">
-          {" "}
-          all good with {car?.modelType} and {car?.bodyType}{" "}
+        <Text variant="hillary" data-cy="subtitle">
+          all good with {car?.modelType} and {car?.bodyType}
         </Text>
       </hgroup>
     </>

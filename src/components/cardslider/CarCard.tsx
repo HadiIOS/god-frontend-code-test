@@ -27,7 +27,7 @@ const CarCard = (props: CarCardProps) => {
               },
             }}
           >
-            <Text subStyle="emphasis"> {props.car.modelName}</Text>
+            <Text subStyle="emphasis" data-cy={`carname-${props.car.id}`}> {props.car.modelName}</Text>
             <Text fg="foreground.secondary"> {props.car.modelType}</Text>
           </Block>
         </Block>
@@ -41,6 +41,7 @@ const CarCard = (props: CarCardProps) => {
           layout="responsive"
           priority={true}
           className={styles.image}
+          data-cy={`image-${props.car.id}`}
         ></Image>
       </Click>
 
@@ -53,10 +54,10 @@ const CarCard = (props: CarCardProps) => {
           justifyContent: "center",
         }}
       >
-        <Link href={`/learn/${props.car.id}/`} arrow="right">
+        <Link data-cy={`learn-${props.car.id}`} href={`/learn/${props.car.id}/`} arrow="right">
           LEARN
         </Link>
-        <Link href={`/shop/${props.car.id}/`} arrow="right">
+        <Link data-cy={`shop-${props.car.id}`} href={`/shop/${props.car.id}/`} arrow="right">
           SHOP
         </Link>
       </Block>

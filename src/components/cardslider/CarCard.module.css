@@ -12,14 +12,11 @@
   }
 }
 
-.card > em:hover {
-  color: blue;
-}
-
 .inline-text {
   display: flex;
 }
 .image {
+  object-fit: cover;
   transition: all .2s ease-in-out;
 }
 .image:hover {

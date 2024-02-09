@@ -7,7 +7,7 @@ type NavProps = {
 };
 
 const Nav = (props: NavProps) => {
-  const [active, setActive] = React.useState('all');
+  const [active, setActive] = React.useState("all");
   return (
     <>
       <TabNav enableLineTransition>
@@ -24,6 +24,7 @@ const Nav = (props: NavProps) => {
         {props.types.map((t, i) => {
           return (
             <TabNavItem
+              data-cy={`navitem-${t}`}
               key={t}
               isActive={active === t}
               onClick={() => {
