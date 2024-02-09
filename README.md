@@ -1,5 +1,16 @@
 # Volvo Cars (Global Online Digital)
 
+## For Running
+### yarn
+
+```yarn install```
+```yarn dev```
+
+### docker
+```docker build -t volvo-test .```
+```docker run -d -p 3000:3000 volvo-test:latest```
+
+
 ## Front-end coding test (React)
 
 Our team's designer has come up with a new design to show our latest and greatest recharge cars on the website.
