@@ -1,7 +1,4 @@
 import {
-  RefObject,
-  UIEventHandler,
-  useCallback,
   useEffect,
   useRef,
   useState,
@@ -58,6 +55,8 @@ const CardSlider = (props: CardSliderProps) => {
           sliderRef.current ? SliderHandler(sliderRef.current, setSlider) : null
         )}
         role="list"
+        data-cy="slider"
+        
       >
         {props.cars.map((car) => (
           <CarCard key={car.id} car={car}></CarCard>
@@ -74,6 +73,7 @@ const CardSlider = (props: CardSliderProps) => {
             iconName="navigation-chevronback"
             areaLabel="Scroll Previous"
             onClick={() => scroll(false)}
+            data-cy="btn-next"
           />
 
           <SlideButton

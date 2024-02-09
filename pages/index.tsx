@@ -48,9 +48,9 @@ function HomePage() {
 
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>Volvo Cars - Main Page</title>
-      </Head> */}
+      </Head>
       <Nav types={model.carTypes} onSelected={setFilter} />
       <Spacer size={100} />
       <CardSlider cars={carsFiltered} height="500px" />

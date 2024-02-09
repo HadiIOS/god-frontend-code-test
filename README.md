@@ -4,10 +4,12 @@
 ### yarn
 
 ```yarn install```
+
 ```yarn dev```
 
 ### docker
 ```docker build -t volvo-test .```
+
 ```docker run -d -p 3000:3000 volvo-test:latest```
 
 

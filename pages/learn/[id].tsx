@@ -10,9 +10,13 @@ const Learn = () => {
 
   React.useEffect(() => {
     const fetchCar = async () => {
-      const res = await fetch(`/api/cars/?id=${id}`);
-      const data = await res.json();
-      return data;
+      if (id) {
+        if (id) {
+          const res = await fetch(`/api/cars/?id=${id}`);
+          const data = await res.json();
+          return data;
+        }
+      }
     };
     console.log("useFetch");
     fetchCar()
@@ -30,12 +34,11 @@ const Learn = () => {
         <title>Volvo | LEARN {car?.modelName}</title>
       </Head>
       <hgroup role="heading" aria-level={1}>
-        <Text variant="hillary" subStyle="emphasis">
+        <Text variant="hillary" subStyle="emphasis" data-cy="learn-title">
           Learn more about {car?.modelName}
         </Text>
-        <Text variant="hillary">
-          {" "}
-          all good with {car?.modelType} and {car?.bodyType}{" "}
+        <Text variant="hillary" data-cy="learn-subtitle">
+          all good with {car?.modelType} and {car?.bodyType}
         </Text>
       </hgroup>
     </>
