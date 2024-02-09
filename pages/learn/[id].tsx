@@ -14,7 +14,7 @@ const Learn = () => {
       const data = await res.json();
       return data;
     };
-    console.log("useFetch")
+    console.log("useFetch");
     fetchCar()
       .catch(console.error)
       .then((cars) => {
@@ -23,7 +23,7 @@ const Learn = () => {
         }
       });
   }, [id]);
-  
+
   return (
     <>
       <Head>

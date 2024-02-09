@@ -23,7 +23,7 @@ function HomePage() {
   );
 
   const fetchCars = async () => {
-    const response = await fetch("/api/cars");
+    const response = await fetch("/api/cars/");
     const cars: Car[] = await response.json();
     return cars;
   };
