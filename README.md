@@ -1,14 +1,25 @@
 # Volvo Cars (Global Online Digital)
 
-## For Running
+## Testing
+
+testing is done E2E cypress,
+you could run yarn cypress:open
+
+make sure that it is running on ```http://localhost:3000```
+
+
+## Building
+
 ### yarn
 
 ```yarn install```
+
 
 ```yarn dev```
 
 ### docker
 ```docker build -t volvo-test .```
+
 
 ```docker run -d -p 3000:3000 volvo-test:latest```
 
